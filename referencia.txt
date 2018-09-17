@@ -1,0 +1,74 @@
+O Vector Space Model (VSM) [4] é uma técnica conhecida no contexto de problemas relacionados à obtenção de informação (IR). Essa técnica baseia-se em interpretar um documento como um vetor, onde cada dimensão corresponde a uma característica do documento. A representação vetorial do documento permite a aplicação de métricas para análise de dissimilaridade como a distância Euclideana (Denição B.4) e a distância de cosseno
+
+
+De forma geral, as atividades do modelo 2.1 podem ser denidas em quatro passos principais: extração de características 2.1.
+
+
+Particionamento extração de características locais
+
+A atividade de extração de características é responsável por descrever localmente uma imagem (e suas porções) em termos das características existentes identicadas. Primeiro, a imagem é particionada e cada porção é descrita e suas características extraídas e organizadas de forma vetorial. Existe uma grande variedade de técnicas para particionar e descrever porções disponíveis na literatura. Como exemplo, os descritores baseados em momentos: (Zernike [], ...) e os baseados em pontos de interesse (Hessian Ane e SIFT []).
+
+
+Aprendizado do dicionário de palavas visuais
+
+Após a denição dos vetores de características das imagens, é aprendido o dicionário de palavras visuais a partir da quantização do espaço de características. Esse passo se dá ao submeter os vetores de características a uma técnica de clusterização.
+Popularmente são utilizadas técnicas como o k-means [] e meanshift []. O conjunto de clusters aprendidos atuam como o dicionário e, individualmente, cada cluster é generalização que representa um conjunto de palavra visuais.
+
+Preprocessamento das Imagens
+
+Na atividade de preprocessamento da imagem, cada imagem é convertida a sua forma em escalas de cinza e é aplicado um ltro mediano para a suavização de ruídos tipo salt-and-peper. Após, é aplicado um ltro bilateral para remoção dos demais ruídos.
+
+
+Identicação dos Artefatos
+
+Cada imagem é composta por um conjunto de formas, chamadas de artefatos, que as representam. Desta forma, nessa atividade, cada imagem é segmentada em camadas em termos de seus artefatos através de duas operações: inclusão e exclusão, ambas exemplicadas pela Figura 4.2. A operação de inclusão dene que um artefato está incluso dentro de outro em uma hierarquia de camadas 4.2.a. Já a operação de exclusão dene que dois artefatos coexistem em uma mesma camada sem sobreposição 4.2.b.
+O limiar de cada artefato é extraído utilizando o método de Otsu's [3].
+A Figura 4.3 apresenta um exemplo dessa atividade, onde a imagem original 4.3.a foi preprocessada, segmentada e o limiar de seus artefatos já expostos de forma binária 4.3.b-4.3.e
+
+Extração de Características
+
+Nessa atividade, cada artefato é submetido a um processo de extração de características desempenhado pelos descritores (Denição B.3). As características extraídas de um aterfato são, então, agrupadas de forma vetorial v ? Rd onde d é a dimensão do vetor (quantidade de características extraídas).
+Para extração de características nós utilizamos uma fusão de descritores baseados em região e descritores baseados em contornos. Para descrever a forma global do artefato são usados os momentos de Zernike [] correspondente as oito primeiras ordens dos momentos, correspondendo a um total de 25 polinômios. Para descrescrever o contorno são usados quatro descritores geométricos: circularidade, energia de exão média, excentricidade e convexidade. Esses descritores provaram ser robustos e simples o suciente para assegurar performace de tempo e acurácia [].
+
+
+
+
+Denição B.3. Descritores de imagem são um conjuntos de técnicas que descrevem imagens em termos de suas características como forma, cor, textura, movimento entre outros. Descritores globais procuram identicar características gerais de uma imagem, enquanto descritores locais procuram características em partes especícas de uma imagem. Alguns descritores globais são listados abaixo.
+1. Momentos de Zernike
+Os momentos de Zernike (Teorema 2) são obtidos através de um conjunto único e idependente, i.e. ortogonal, de polinômios em uma unidade de círculo U : x2 +y2 = 1, conhecidos como polinômios de Zernike [1, 5].
+2. Geométricos
+Dado um artefato T, alguns descritores geométricos e suas características são denidos como seguem:
+? Circularidade
+A característica de circularidade é denida como a relação quadrada do perímetro pela área.
+Tcra =
+T2perimetro 4pTarea
+(B.1)
+? Energia de Flexão Média
+A característica de energia de exão média é denida por
+Tefm =
+1 N
+N-1 X s=0
+K(s)2 (B.2)
+onde, para uma curva parametrizada G(t) = (x(t),y(t)), k = |x0y00-y0x00| (x02+y02) 3 2
+.
+Appendix B -- Conceitos Básicos 14
+? Excentricidade
+A característica de excentricidade (Teorema 3) é denida pelo cruzamento unicamente ortogonal dos principais eixos através do centroíde representando as direções de cruzamento sem correlação.
+Texc =
+?2 ?1
+(B.3)
+onde ?1 e ?2 são os autovalores da matrix de covariância do contorno do artefato.
+? Convexidade
+A característica de Convexidade é denido como a relação entre o perímetro do casco convexo de um artefato e seu perímetro.
+Tcov =
+Tcascoconvexo Tperimetro
+(B.4)
+Denição B.4. distancias/similaridade/dissimilaridade
+? Distância Euclideana
+...
+? Distância das Hierarquías Visuais
+Denição B.5. A clusterização é um conjunto de técnicas de aprendização não supervisionado responsáveis por agrupar dados não rotulados através da similaridade entre eles. A similaridade pode ser medida através de uma função de distância, como a distancia Euclideana (Denição B.4), aplicada aos vetores de características de dois dados. Os clusters obtidos ao m do processo de clusterização atual como rótulos aprendidos.
+? k-means
+A técnica de clusterização k-means (Teorema 1) é um método quatização vetorial popular na análise de clusters em mineração de dados. A técnica agrupa os dados de forma a separar amostras em grupos de igual variância, minimizando o critério inércia (soma dos quadrados das distâncias dentro de um cluster (WCSS)).
+Denição B.6. meanshift
+APPENDIX C -- Teoremas e Provas
