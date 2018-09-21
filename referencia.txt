@@ -1,0 +1,57 @@
+Bob Fisher <rbf@inf.ed.ac.uk>
+Date: 2018-09-15 7:38 GMT-03:00
+Subject: [Edinburghvision] advertise your computer vision dataset?
+To: EdinburghVision@inf.ed.ac.uk
+
+Dear all:
+
+Do you have an image/video dataset that you would like to be included 
+in the CVonline list of datasets?
+
+  http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm
+
+CVonline has more than 1000 different datasets of interest to the 
+image processing and computer vision communities.
+
+The current main categories are listed below. 
+
+If you'd like your dataset included, tell me about it
+with these details:
+  URL
+  database title
+  1 sentence describing it
+  who to credit for the dataset
+  what category it belongs in the list below
+
+Why contribute?
+1) Most databases have an associated paper, and you can get more citations?
+2) People comparing results on the same dataset advances computer vision methods!
+
+-----------------------------------------------------------
+
+Baixadas:
+
+-----------------------------------------------------------
+
+http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm#autodriving
+http://data.nvision2.eecs.yorku.ca/JAAD_dataset/
+http://jaad-explore.nvision2.eecs.yorku.ca/
+
+-----------------------------------------------------------
+
+http://web.mit.edu/torralba/www/indoor.html
+A. Quattoni, and A.Torralba. Recognizing Indoor Scenes. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2009.
+
+-----------------------------------------------------------
+
+https://www.raghavendersahdev.com/place-recognition.html
+
+-----------------------------------------------------------
+
+Caltech Pedestrian Detection Benchmark
+http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm#people
+http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/
+
+-----------------------------------------------------------
+
+http://www.lookingatpeople.com/download-daimler-ped-segm-benchmark/index.html
