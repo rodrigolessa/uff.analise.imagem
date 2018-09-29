@@ -2,7 +2,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv2.imread('pedestre.tif', 0)
+img = cv2.imread('pedestrian_test.png', 0)
 
 hist, bins = np.histogram(img.flatten(), 256, [0, 256])
 

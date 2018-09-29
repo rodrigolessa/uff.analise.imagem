@@ -65,5 +65,3 @@ Denição B.5. A clusterização é um conjunto de técnicas de aprendização não supe
 ? k-means
 A técnica de clusterização k-means (Teorema 1) é um método quatização vetorial popular na análise de clusters em mineração de dados. A técnica agrupa os dados de forma a separar amostras em grupos de igual variância, minimizando o critério inércia (soma dos quadrados das distâncias dentro de um cluster (WCSS)).
 Denição B.6. meanshift
-APPENDIX C -- Teoremas e Provas
->>>>>>> 86ad8b288f9386ce4badf1061ba370252a855a01
