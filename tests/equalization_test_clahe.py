@@ -12,11 +12,11 @@ img = cv2.imread(imgName, 0)
 clahe = cv2.createCLAHE()
 cl1 = clahe.apply(img)
 
-#cv2.imwrite('clahe_2.jpg',cl1)
-
 res = np.hstack((img, cl1))
 #cv2.imwrite('res.png', res)
 cv2.imshow("Equalization", res)
 cv2.waitKey(0)
+
+cv2.imwrite('pedestrian_test_clahe_2.jpg',cl1)
 
 cv2.destroyAllWindows()
