@@ -46,6 +46,10 @@ http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/
 
 -----------------------------------------------------------
 
+Daimler Pedestrian Segmentation Benchmark
+http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/Daimler_Pedestrian_Segmentatio/daimler_pedestrian_segmentatio.html
 http://www.lookingatpeople.com/download-daimler-ped-segm-benchmark/index.html
 
 -----------------------------------------------------------
+
+
