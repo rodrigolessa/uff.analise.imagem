@@ -3,7 +3,10 @@ import numpy as np
 import cv2
 
 img = cv2.imread('pedestrian_00013.png')
-#cv2.imshow("Imagem Colorida", img)
+
+# We have three channels (RGB) for each pixel and 
+# we cannot apply histogram equalization on the three channels 
+# in a separate manner.
 
 # Separar os canais
 canais = cv2.split(img)
