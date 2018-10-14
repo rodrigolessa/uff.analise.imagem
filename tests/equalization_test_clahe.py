@@ -10,6 +10,7 @@ img = cv2.imread(imgName, 0)
 # create a CLAHE object (Arguments are optional).
 #clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
 clahe = cv2.createCLAHE()
+
 cl1 = clahe.apply(img)
 
 res = np.hstack((img, cl1))
