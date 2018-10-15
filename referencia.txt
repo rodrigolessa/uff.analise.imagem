@@ -54,3 +54,38 @@ http://www.lookingatpeople.com/download-daimler-ped-segm-benchmark/index.html
 -----------------------------------------------------------
 
 
+
+
+
+Sistema de coordenadas e manipulação de Pixels
+Fatiamento e desenho sobre a imagem
+Transformações e máscaras
+- Cortando uma imagem / Crop
+- Redimensionamento / Resize
+- Espelhando uma imagem / Flip
+- Rotacionando uma imagem / Rotate
+- Máscaras
+
+Sistemas de cores
+- Canais da imagem colorida
+
+Histogramas e equalização de imagem
+- Equalização de Histograma
+
+Gráfico de colunas que representa a distribuição dos valores dos pixels da imagem (do mais claro até o mais escuro).
+O eixo X possui uma distribuição de 0 a 255, a intensidade do pixel. No eixo Y, a quantidade de pixels daquela intensidade.
+
+Suavização de imagens
+- Suavização por cálculo da média
+- Suavização pela Gaussiana
+- Suavização pela mediana
+- Suavização com filtro bilateral
+
+Binarização com limiar
+- Threshold adaptativo
+- Threshold com Otsu e Riddler-Calvard
+
+Segmentação e métodos de detecção de bordas
+- Sobel
+- Filtro Laplaciano
+- Detector de bordas Canny
