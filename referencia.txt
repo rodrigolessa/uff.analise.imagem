@@ -1,3 +1,9 @@
+2018-11-29
+
+Artigos:
+http://repositorio.ufes.br/bitstream/10/4210/1/tese_2815_.pdf
+
+
 2018-09-15 7:38 GMT-03:00
 Bob Fisher <rbf@inf.ed.ac.uk>
 Edinburghvision - advertise your computer vision dataset?
