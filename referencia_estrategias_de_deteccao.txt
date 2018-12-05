@@ -1,0 +1,17 @@
+http://cbcl.mit.edu/software-datasets/streetscenes/
+
+
+Object Detection Models
+
+Crop-Wise Object Detection
+A detecção de objetos Crop-Wise é uma maneira simples e comum de medir o poder de um sistema de detecção de objetos. Nesse método, pequenas culturas de exemplos positivos e negativos da categoria de objeto de destino são extraídas primeiro das imagens maiores. Por exemplo, imagens de carros positivas conteriam imagens de carros bem cortadas, enquanto imagens negativas de carros conteriam qualquer coisa além de carros. Estas imagens são representadas matematicamente de alguma forma, e. com wavelets ou histogramas de gradientes ou qualquer outra coisa, e então uma máquina de aprendizado estatístico é empregada para aprender um classificador entre os dois conjuntos. Para medir a eficácia do detector aprendido, parte do conjunto de treinamento é reservada para medir o desempenho (prefiro usar cerca de um terço). Repetir essa divisão de treinamento / teste várias vezes fornece uma medida estatisticamente significativa da detecção de objetos em relação à cultura.
+
+Images + Annotations >> Extraction Code >> Extracted Image Crops >> Feature Generation Code >> Pos/Neg Feature Matricies >> Learning & Cross >> Validation >> Code >> ROC >> Curves
+
+General Matlab Support Code
+
+Point-Wise Object Detection
+A detecção de objetos Point-Wise é semelhante à detecção de objetos em termos de cultura, exceto que em vez de classificar as caixas que se ajustam ao objeto de interesse, em vez disso, classificamos os pontos (e suas vizinhanças) dentro do objeto. Neste método, um conjunto de pontos positivo e negativo é selecionado (isto é, pontos dentro e fora do objeto). Em cada um desses pontos, um recurso matemático é extraído, o que geralmente depende dos padrões de brilho e cor na vizinhança do ponto. Uma vez que esses recursos tenham sido extraídos, o aprendizado e o teste ocorrem como na detecção de objetos por cultura.
+
+Bounding Box-Wise Object Detection
+O objeto Box-Wise Bounding detecta a medida mais próxima da execução de um sistema útil de detecção de objetos nesses tipos de cenas. Nesse método, um detector de objetos é treinado, como na detecção de culturas, mas aplicado a um conjunto reservado de imagens de teste em várias posições e escalas. A resposta do detector é enviada para um algoritmo de supressão de vizinhança local, que gera um conjunto de posições e confidências dentro do conjunto de testes para a existência de um objeto possível. Este conjunto é então comparado com as posições humanas de referência, e detecções suficientemente próximas em posição e escala são chamadas de detecções verdadeiras. Usando esses dados, uma curva de recuperação de precisão é desenhada para medir o desempenho total do sistema.

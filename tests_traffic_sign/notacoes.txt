@@ -1,3 +1,18 @@
+2018-12-04
+
+Descrição do Projeto:
+
+Análise de rodovias utilizando
+
+Analisar as sinalizações de trânsitos de rodovias para sugerir melhorias para segurança dos condutores de veículos em área de risco.
+
+Referências:
+http://www.cvl.isy.liu.se/en/research/ima/index.html
+
+-----------------------------------------------------
+2018-11-30
+Processamento
+
 Pipeline:
  - Conversão da imagem colorida para escala de cinza
  - Filtro bilateral (noise-reducing. based on a Gaussian distribution)
@@ -77,3 +92,10 @@ Perimetro: 741.1656595468521
  * The Ramer–Douglas–Peucker algorithm, also known as the Douglas–Peucker algorithm and iterative end-point fit algorithm, is an algorithm that decimates a curve composed of line segments to a similar curve with fewer points.
 
  * The Canny edge detector is an edge detection operator that uses a multi-stage algorithm to detect a wide range of edges in images. It was developed by John F. Canny in 1986. Canny also produced a computational theory of edge detection explaining why the technique works.
+
+
+
+2 - Features color
+
+Anotar cores como características das placas para reconhecimento;
+
