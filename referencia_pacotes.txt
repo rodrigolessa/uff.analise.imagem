@@ -1,0 +1,44 @@
+pip install numpy 
+# Open-source software for mathematics, science, and engineering. Depends on NumPy
+pip install scipy
+pip install requests
+pip install matplotlib
+pip install mahotas
+pip install Pillow
+# Python Imaging Library (Fork)
+pip install opencv-contrib-python
+pip install pandas
+pip install scikit-image
+# https://scikit-image.org/
+pip install --upgrade scikit-learn
+# scikit-learn requires:
+# - Python (>= 3.5)
+# - NumPy (>= 1.11.0)
+# - SciPy (>= 0.17.0)
+# - joblib (>= 0.11)
+# For running the examples: 
+# - Matplotlib >= 1.5.1
+# - scikit-image >= 0.12.3
+# - pandas >= 0.18.0.
+pip install tensorflow
+pip install imutils
+# Adrian Rosebrock - pysearchimage.com
+
+# -- Somente para alguns projetos
+pip install PyQt5
+pip install setuptools
+pip install SIP
+# What is SIP?
+# One of the features of Python that makes it so powerful is the ability to take existing libraries, written in C or C++, and make them available as Python extension modules. Such extension modules are often called bindings for the library
+pip install tesseract_sip
+# Yet another python library wrapper for Tesseract, this one uses SIP to do the wrapping. Distributed using the same license as Tesseract.
+pip install scikit-spatial
+
+
+
+
+
+
+
+
+

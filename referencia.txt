@@ -3,9 +3,6 @@
 Artigos de referência para como obter informações/imagens de trânsitos
 https://www.nuscenes.org/data-collection
 
-
-
-
 2018-11-29
 
 Artigos:
@@ -74,10 +71,6 @@ http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/Daimler_Pedestria
 http://www.lookingatpeople.com/download-daimler-ped-segm-benchmark/index.html
 
 -----------------------------------------------------------
-
-
-
-
 
 Sistema de coordenadas e manipulação de Pixels
 Fatiamento e desenho sobre a imagem
